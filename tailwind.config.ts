@@ -47,6 +47,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "warm-earth": "hsl(var(--warm-earth))",
+        "healing-green": "hsl(var(--healing-green))",
+        "trust-blue": "hsl(var(--trust-blue))",
+        "warm-accent": "hsl(var(--warm-accent))",
+        "deep-green": "hsl(var(--deep-green))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
