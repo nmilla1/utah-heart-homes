@@ -7,6 +7,15 @@ import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { MapPin, Phone, Mail } from "lucide-react";
 import utahImage from "@/assets/utah-community.jpg";
+import { z } from "zod";
+
+const formSchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(100),
+  email: z.string().trim().email("Invalid email address").max(255),
+  phone: z.string().trim().min(10, "Phone number is required").max(20),
+  city: z.string().trim().min(1, "City is required").max(100),
+  message: z.string().trim().max(1000)
+});
 
 export const LeadForm = () => {
   const { toast } = useToast();
@@ -18,21 +27,52 @@ export const LeadForm = () => {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    toast({
-      title: "Thank you for your interest!",
-      description: "We'll contact you within 24 hours to discuss next steps.",
-    });
+    try {
+      const validatedData = formSchema.parse(formData);
+      
+      // Send email with form data
+      const emailContent = `
+New Host Home Provider Inquiry
 
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      city: "",
-      message: ""
-    });
+Name: ${validatedData.name}
+Email: ${validatedData.email}
+Phone: ${validatedData.phone}
+City: ${validatedData.city}
+Message: ${validatedData.message || "No message provided"}
+      `.trim();
+
+      // Encode the email content for mailto link
+      const subject = encodeURIComponent("New Host Home Provider Inquiry");
+      const body = encodeURIComponent(emailContent);
+      const mailtoLink = `mailto:nefilani@gmail.com?subject=${subject}&body=${body}`;
+      
+      // Open default email client
+      window.location.href = mailtoLink;
+      
+      toast({
+        title: "Thank you for your interest!",
+        description: "We'll contact you within 24 hours to discuss next steps.",
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        city: "",
+        message: ""
+      });
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        toast({
+          title: "Validation Error",
+          description: error.errors[0].message,
+          variant: "destructive"
+        });
+      }
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -150,7 +190,7 @@ export const LeadForm = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-foreground mb-1">Call Us</h3>
-                    <p className="text-muted-foreground">(801) 555-0123</p>
+                    <p className="text-muted-foreground">(760) 626-8094</p>
                     <p className="text-sm text-muted-foreground mt-1">Mon-Fri, 8am-6pm MT</p>
                   </div>
                 </div>
@@ -163,7 +203,7 @@ export const LeadForm = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-foreground mb-1">Email Us</h3>
-                    <p className="text-muted-foreground">info@milestonecounseling.com</p>
+                    <p className="text-muted-foreground">nefilani@gmail.com</p>
                     <p className="text-sm text-muted-foreground mt-1">We respond within 24 hours</p>
                   </div>
                 </div>

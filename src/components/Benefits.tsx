@@ -11,7 +11,7 @@ export const Benefits = () => {
     {
       icon: DollarSign,
       title: "Receive Fair Compensation",
-      description: "Earn competitive monthly payments while providing a safe, caring home environment."
+      description: "Host home providers make between $4,000-$6,000 per month while providing a safe, caring home environment."
     },
     {
       icon: BookOpen,

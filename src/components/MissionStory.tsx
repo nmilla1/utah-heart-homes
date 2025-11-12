@@ -21,7 +21,7 @@ export const MissionStory = () => {
                 <div className="text-sm text-muted-foreground">Lives Changed</div>
               </div>
               <div className="text-center p-4 rounded-lg bg-card">
-                <div className="text-3xl font-bold text-trust-blue mb-2">10+</div>
+                <div className="text-3xl font-bold text-trust-blue mb-2">20+</div>
                 <div className="text-sm text-muted-foreground">Years of Service</div>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import { Logo } from "./Logo";
 
 interface NavigationProps {
   onCtaClick: () => void;
@@ -13,10 +14,7 @@ export const Navigation = ({ onCtaClick }: NavigationProps) => {
     <nav className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-sm shadow-sm z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <div className="flex items-center gap-2">
-            <h1 className="text-2xl font-bold text-healing-green">Milestone</h1>
-            <span className="text-xl text-foreground">Counseling</span>
-          </div>
+          <Logo className="h-10" />
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">

@@ -32,8 +32,8 @@ export const Footer = () => {
           <div>
             <h4 className="font-bold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-background/80">
-              <li>(801) 555-0123</li>
-              <li>info@milestonecounseling.com</li>
+              <li>(760) 626-8094</li>
+              <li>nefilani@gmail.com</li>
               <li>Serving all of Utah</li>
             </ul>
           </div>
