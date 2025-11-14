@@ -18,16 +18,16 @@ export const Navigation = ({ onCtaClick }: NavigationProps) => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#mission" className="text-foreground hover:text-healing-green transition-colors">
+            <a href="#mission" className="text-foreground hover:text-trust-blue transition-colors">
               Our Mission
             </a>
-            <a href="#how-it-works" className="text-foreground hover:text-healing-green transition-colors">
+            <a href="#how-it-works" className="text-foreground hover:text-trust-blue transition-colors">
               How It Works
             </a>
-            <a href="#services" className="text-foreground hover:text-healing-green transition-colors">
+            <a href="#services" className="text-foreground hover:text-trust-blue transition-colors">
               Services
             </a>
-            <Button onClick={onCtaClick} className="bg-healing-green hover:bg-deep-green">
+            <Button onClick={onCtaClick} className="bg-trust-blue hover:bg-trust-blue/90">
               Get Started
             </Button>
           </div>
@@ -46,21 +46,21 @@ export const Navigation = ({ onCtaClick }: NavigationProps) => {
           <div className="md:hidden pb-4 space-y-4">
             <a 
               href="#mission" 
-              className="block text-foreground hover:text-healing-green transition-colors py-2"
+              className="block text-foreground hover:text-trust-blue transition-colors py-2"
               onClick={() => setIsOpen(false)}
             >
               Our Mission
             </a>
             <a 
               href="#how-it-works" 
-              className="block text-foreground hover:text-healing-green transition-colors py-2"
+              className="block text-foreground hover:text-trust-blue transition-colors py-2"
               onClick={() => setIsOpen(false)}
             >
               How It Works
             </a>
             <a 
               href="#services" 
-              className="block text-foreground hover:text-healing-green transition-colors py-2"
+              className="block text-foreground hover:text-trust-blue transition-colors py-2"
               onClick={() => setIsOpen(false)}
             >
               Services
@@ -70,7 +70,7 @@ export const Navigation = ({ onCtaClick }: NavigationProps) => {
                 onCtaClick();
                 setIsOpen(false);
               }} 
-              className="w-full bg-healing-green hover:bg-deep-green"
+              className="w-full bg-trust-blue hover:bg-trust-blue/90"
             >
               Get Started
             </Button>

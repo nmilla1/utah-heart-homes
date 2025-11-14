@@ -12,7 +12,7 @@ export const Hero = ({ onCtaClick }: HeroProps) => {
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-healing-green/95 via-healing-green/90 to-trust-blue/85"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-trust-blue/95 via-trust-blue/90 to-healing-green/80"></div>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -29,9 +29,9 @@ export const Hero = ({ onCtaClick }: HeroProps) => {
           <div className="flex flex-col sm:flex-row gap-4">
             <Button 
               size="lg" 
-              variant="secondary"
+              variant="default"
               onClick={onCtaClick}
-              className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 bg-trust-blue hover:bg-trust-blue/90"
             >
               Learn How to Become a Host Home Provider
             </Button>
