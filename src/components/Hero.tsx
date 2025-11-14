@@ -31,7 +31,7 @@ export const Hero = ({ onCtaClick }: HeroProps) => {
               size="lg" 
               variant="default"
               onClick={onCtaClick}
-              className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 bg-trust-blue hover:bg-trust-blue/90"
+              className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 bg-healing-green hover:bg-deep-green"
             >
               Learn How to Become a Host Home Provider
             </Button>

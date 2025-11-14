@@ -27,7 +27,7 @@ export const Navigation = ({ onCtaClick }: NavigationProps) => {
             <a href="#services" className="text-foreground hover:text-trust-blue transition-colors">
               Services
             </a>
-            <Button onClick={onCtaClick} className="bg-trust-blue hover:bg-trust-blue/90">
+            <Button onClick={onCtaClick} className="bg-healing-green hover:bg-deep-green">
               Get Started
             </Button>
           </div>
@@ -70,7 +70,7 @@ export const Navigation = ({ onCtaClick }: NavigationProps) => {
                 onCtaClick();
                 setIsOpen(false);
               }} 
-              className="w-full bg-trust-blue hover:bg-trust-blue/90"
+              className="w-full bg-healing-green hover:bg-deep-green"
             >
               Get Started
             </Button>
